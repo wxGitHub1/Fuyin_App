@@ -1,0 +1,218 @@
+<template>
+  <div id="header" class="float">
+    <div class="left">
+      <img :src="logo_ImgUrl" alt="logo" />
+    </div>
+    <div class="right" @click="menu()">
+      <img v-if="isShow" :src="heard_right_ImgUrl_close" alt="logo" />
+      <img v-else :src="heard_right_ImgUrl" alt="logo" />
+    </div>
+    <div class="center">{{header_title}}</div>
+    <transition name="fade">
+      <div v-show="isShow" class="menu">
+        <div
+          :class="{active:act==index}"
+          @click="menu_item_fuc(index,item)"
+          v-for="(item,index) in menuList"
+          :key="index"
+        >{{item.name}}</div>
+      </div>
+    </transition>
+  </div>
+  <!-- <van-nav-bar 
+        :left-arrow="leftArrow"
+        :left-text="leftText" 
+        :border="border" 
+        :fixed="fixed" 
+        :z-index="zIndex" 
+        @click-left="onClickLeft" 
+        @click-right="onClickRight"
+    >
+        <div slot="title">
+            <span v-if="titleType == 1">{{title}}</span>
+            <slot v-else name="title_slot"></slot>
+        </div>
+        <div slot="right">
+            <span v-if="rightType == 1">{{rightText}}</span>
+            <slot v-else name="right_slot"></slot>
+        </div>
+  </van-nav-bar>-->
+</template>
+
+<script>
+// import { NavBar } from 'vant';
+export default {
+  data() {
+    return {
+      header_title:"首页",
+      logo_ImgUrl: require("../../images/logo.png"),
+      heard_right_ImgUrl: require("../../images/list.png"),
+      heard_right_ImgUrl_close: require("../../images/close.png"),
+      isShow: false,
+      menuList: [
+        { name: "首页",go:"/home"},
+        { name: "骨骼测评",go:"/test" },
+        { name: "关于我们",go:"/fuyin" },
+        { name: "联系我们",go:"/contact" }
+      ],
+      act: 0
+    };
+  },
+  // components:{
+  //     [NavBar.name]: NavBar,
+  // },
+  // props: {
+  //     leftArrow: {                    //是否显示左侧箭头
+  //         type: Boolean,
+  //         default: true
+  //     },
+  //     rightType: {                    //右侧样式,1文字，其他自定义
+  //         type: Number,
+  //         default: 1
+  //     },
+  //     titleType: {                   //标题样式,1文字，其他自定义
+  //         type: Number,
+  //         default: 1
+  //     },
+  //     title: {                       //标题内容
+  //         type: String,
+  //         default: '标题'
+  //     },
+  //     leftText: {                    //左侧文案
+  //         type: String,
+  //         default: ''
+  //     },
+  //     rightText: {                   //右侧文案
+  //         type: String,
+  //         default: ''
+  //     },
+  //     border: {                      //是否显示下边框
+  //         type: Boolean,
+  //         default: false
+  //     },
+  //     preventGoBack: {               //是否阻止返回
+  //         type: Boolean,
+  //         default: false
+  //     },
+  //     fixed: {                       //是否固定在顶部
+  //         type: Boolean,
+  //         default: true
+  //     },
+  //     zIndex: {                       //元素 z-index
+  //         type: Number,
+  //         default: 100
+  //     }
+  // },
+  methods: {
+    menu_item_fuc(index,item) {
+      this.$router.push(item.go);
+      this.header_title=item.name;
+      this.act = index;
+      this.isShow = false;
+    },
+    menu() {
+      this.isShow = !this.isShow;
+    }
+
+    // onClickLeft() {
+    //     if(this.preventGoBack){
+    //         this.$emit('on-click-left');
+    //     }else{
+    //         this.$router.go(-1);
+    //     }
+    // },
+    // onClickRight() {
+    //     this.$emit('on-click-right');
+    // }
+  }
+};
+</script>
+<style lang="scss" scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+.left {
+  width: 100px;
+  height: 2.5rem;
+  // background-color: #823384;
+  text-align: center;
+  font-size: 20px;
+  color: #fdf6e3;
+}
+.center {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  // background-color: #d29922;
+}
+.right {
+  width: 100px;
+  height: 2.5rem;
+  // background-color: #0c8ac5;
+  text-align: center;
+  font-size: 20px;
+  color: #fdf6e3;
+}
+#header {
+  position: relative;
+  height: 2.5rem;
+  background: #819a35;
+  .menu {
+    width: 100%;
+    height: 100%;
+    background: rgba(97, 112, 48, 0.9);
+    position: fixed;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 500;
+    top: 2.5rem;
+    div {
+      width: 90%;
+      height: 3rem;
+      line-height: 3rem;
+      margin: 0 auto;
+      border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
+    }
+    .active {
+      color: #9eea6a;
+    }
+    div > :last-child {
+      border-bottom: none;
+    }
+  }
+}
+.float .left {
+  float: left;
+  padding: 5px;
+  img {
+    height: 100%;
+  }
+}
+.float .right {
+  float: right;
+  padding: 5px 5px 5px 50px;
+  img {
+    height: 100%;
+  }
+}
+
+// .van-nav-bar__left{
+//     left: 0;
+//     .van-nav-bar__arrow{
+//         min-width: 1rem;
+//     }
+// }
+// .van-nav-bar__left,.van-nav-bar__right{
+//     .van-icon{
+//         font-size: 20px;
+//         color: #666;
+//     }
+// }
+</style>

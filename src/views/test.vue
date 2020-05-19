@@ -31,13 +31,23 @@
       <h1>骨骼测评的组成</h1>
     </div>
     <van-swipe :loop="false" :width="120" :show-indicators="false">
-      <van-swipe-item @click="mune(index)" v-for="(item,index) in zcList" :key="index">
+      <van-swipe-item @click="menu(index)" v-for="(item,index) in zcList" :key="index">
         <div class="guge-zc">
-          <img :src="item.imgUrl" :alt='index'/>
+          <img :src="item.imgUrl" :alt="index" />
           <p>{{item.title}}</p>
         </div>
       </van-swipe-item>
     </van-swipe>
+    <div class="color_show">
+      <div class="my-title">
+        <h1>发育型防护气垫</h1>
+      </div>
+      <div class="text1">扫描下方二维码，了解发育型防护气垫产品</div>
+      <div class="text-C margin-tb-20">
+        <img src="../images/test/img_erwei.png" alt="ma" />
+      </div>
+      <div class="text2">扫码进入小程序</div>
+    </div>
   </div>
 </template>
 <script>
@@ -86,31 +96,29 @@ export default {
       zcList: [
         {
           imgUrl: require("../images/test/kp_zb.png"),
-          title: "足部测评",
+          title: "足部测评"
         },
         {
           imgUrl: require("../images/test/kp_xz.png"),
-          title: "下肢测评",
+          title: "下肢测评"
         },
         {
           imgUrl: require("../images/test/kp_qg.png"),
-          title: "躯干测评",
+          title: "躯干测评"
         },
         {
           imgUrl: require("../images/test/kp_jc.png"),
-          title: "基础测评",
+          title: "基础测评"
         }
-      ],
-
+      ]
     };
   },
   methods: {
     menu(index) {
       console.log(index);
+      this.$router.push({name:'type',query: {id:index}})
+      this.$store.commit('changeTitle',"测评类型")
     },
-    mune(index){
-        console.log(index)
-    }
   }
 };
 </script>
@@ -190,5 +198,27 @@ export default {
   img {
     width: 106px;
   }
+}
+.color_show {
+  margin-top: 20px;
+  padding-top: 100px;
+  width: 100%;
+  background: url(../images/img_shui.png) no-repeat top;
+  background-size: 100% 150px;
+}
+.text1 {
+  text-align: center;
+  font-size: 7px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+}
+.text2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: rgba(68, 68, 68, 1);
 }
 </style>

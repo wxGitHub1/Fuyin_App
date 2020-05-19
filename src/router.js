@@ -4,6 +4,7 @@ import Home from './views/home.vue'
 import Test from './views/test.vue'
 import Fuyin from './views/fuyin.vue'
 import Contact from './views/contact.vue'
+import Type from './views/type.vue'
 
 Vue.use(Router)
 
@@ -33,6 +34,11 @@ export default new Router({
       path: '/contact',
       name: 'contact',
       component: Contact
+    },
+    {
+      path: '/type',
+      name: 'type',
+      component: Type
     },
   ]
 })

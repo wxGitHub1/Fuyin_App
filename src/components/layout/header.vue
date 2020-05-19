@@ -7,7 +7,7 @@
       <img v-if="isShow" :src="heard_right_ImgUrl_close" alt="logo" />
       <img v-else :src="heard_right_ImgUrl" alt="logo" />
     </div>
-    <div class="center">{{header_title}}</div>
+    <div class="center">{{this.$store.state.header_title}}</div>
     <div></div>
     <transition name="fade">
       <div v-show="isShow" class="menu">
@@ -45,27 +45,30 @@
 export default {
   data() {
     return {
-      header_title: "首页",
       logo_ImgUrl: require("../../images/logo.png"),
       heard_right_ImgUrl: require("../../images/list.png"),
       heard_right_ImgUrl_close: require("../../images/close.png"),
       isShow: false,
       menuList: [
-        { name: "首页", go: "/home" },
-        { name: "骨骼测评", go: "/test" },
-        { name: "关于我们", go: "/fuyin" },
-        { name: "联系我们", go: "/contact" }
+        { name: "首页", go: "home" },
+        { name: "骨骼测评", go: "test" },
+        { name: "关于我们", go: "fuyin" },
+        { name: "联系我们", go: "contact" }
       ],
       act: 0
     };
   },
   mounted() {
     this.menuList.forEach((obj,index) => {
-      if (this.$route.path == obj.go) {
-        this.header_title = obj.name;
+      if (this.$route.name == obj.go) {
+        this.$store.commit('changeTitle',obj.name)
         this.act = index;
       }
     });
+    if(this.$route.name=='type'){
+      this.$store.commit('changeTitle','测评类型')
+      this.act = 1;
+    }
   },
   // components:{
   //     [NavBar.name]: NavBar,
@@ -114,8 +117,8 @@ export default {
   // },
   methods: {
     menu_item_fuc(index, item) {
-      this.$router.push(item.go);
-      this.header_title = item.name;
+      this.$router.push({name:item.go});
+      this.$store.commit('changeTitle',item.name)
       this.act = index;
       this.isShow = false;
     },

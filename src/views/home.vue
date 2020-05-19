@@ -1,12 +1,62 @@
 <template>
   <div id="home">
-    <p>主页</p>
+    <div class="text-C margin-tb-20">
+      <img :src="img1" alt="img1" width="242px" />
+    </div>
+    <div class="text-C margin-tb-40">
+      <img :src="img2" alt="img1" width="334px" />
+    </div>
+    <div class="margin-lr-P5">
+      <h1 class="text-C margin-tb-40 why">为什么骨骼测评？</h1>
+      <div v-for="(item,index) in whyList" :key="index" class="container">
+        <div class="image">
+          <img :src="item.imgUrl" :alt="index" />
+        </div>
+        <div class="text">
+          <h3>{{item.title}}</h3>
+          <p>{{item.text}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="width-p90 margin-auto border-1">
+      <div class="container_fouth padding-tb-40">{{myText}}</div>
+    </div>
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
+      img1: require("../images/home/img_gu.png"),
+      img2: require("../images/home/img_boy.png"),
+      img3: require("../images/home/icon_01.png"),
+      whyList: [
+        {
+          imgUrl: require("../images/home/icon_01.png"),
+          title: "了解孩子发育现状",
+          text: "进行全面的骨骼测评，可清晰了解到孩子的发育现状。"
+        },
+        {
+          imgUrl: require("../images/home/icon_02.png"),
+          title: "持续跟踪孩子发育状况",
+          text:
+            "骨骼发育是一个持续的过程，儿童和青少年时期骨骼发育速度最快，定期更新发育数据是防患于未然最好的方法。"
+        },
+        {
+          imgUrl: require("../images/home/icon_03.png"),
+          title: "及早发现骨骼发育问题",
+          text:
+            "骨骼发育影响孩子的一生，全面的骨骼测评可以及早发现潜在的问题，并及时进行干预。"
+        },
+        {
+          imgUrl: require("../images/home/icon_04.png"),
+          title: "匹配适合的运动或产品",
+          text:
+            "每个孩子的骨骼测评数据都不相同，根据这些数据我们推荐适合每一个孩子的运动建议或矫形产品。"
+        }
+      ],
+      myText:
+        "儿童时期是孩子生长发育的黄金时期，这一时期孩子的骨骼可塑性极强，同时也极易变形，所以家长需要格外关注孩子的骨骼发育，定期测评，了解孩子的发育现状，一旦孩子存在任何骨骼发育问题，可尽早干预矫正，让孩子拥有一个完美的身形体态和健康的身体，是骨骼测评的最终目的。"
       // title: [
       //   { id: "1", title: "标题1" },
       //   { id: "2", title: "标题2" },
@@ -36,6 +86,55 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+#home {
+  padding: 1;
+  margin-top: 2.5rem;
+  padding-top: 1px;
+}
+.why {
+  color: #84973a;
+  letter-spacing: 8px;
+  font-size: 2em;
+}
+.container {
+  margin: 2rem 0;
+  // text-align: center;
+  .image {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20%;
+  }
+  .text {
+    display: inline-block;
+    vertical-align: middle;
+    width: 65%;
+    margin-left: 1rem;
+    text-align: left;
+    h3 {
+      margin: 0;
+      font-weight: 550;
+      letter-spacing: 1px;
+      font-size: 1.1rem;
+    }
+    p {
+      margin: 0;
+      padding-top: 0.5rem;
+      color: #6b6b6b;
+      font-weight: 550;
+      font-size: 0.8rem;
+    }
+  }
+}
+.container_fouth {
+  font-size: 9px;
+  font-family: CTZhongYuanSJ;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+  line-height: 24px;
+}
+.border-1{
+  border-top: 1px solid rgba(1, 1, 1, 0.3);
+}
 // #home {
 //   width: 100%;
 //   position: absolute;

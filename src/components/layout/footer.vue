@@ -2,7 +2,7 @@
   <div id="footer">
     <div class="phone">
       <div class="text">
-        <div>关于骨骼测评</div>
+        <div class="animated tada">关于骨骼测评</div>
       </div>
       <div class="number">
         <a href="tel: 029-6888-2888">029-6888-2888</a>
@@ -96,6 +96,7 @@ export default {
 }
 .phone .number a {
   line-height: 1.5rem;
+  color: #a3b271;
 }
 .phone .number p {
   line-height: 1rem;

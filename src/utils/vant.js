@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import { Dialog } from 'vant';
 import { Toast } from 'vant';
+import { Swipe, SwipeItem } from 'vant';
 Vue.use(Toast);
 
 //引入常用的组件
@@ -18,9 +19,11 @@ Vue.use(require('vant').Pagination);
 //注册全局组件
 import header from '@/components/layout/header'
 import footer from '@/components/layout/footer'
+import map from '@/components/map/map'
 import tab from '@/components/layout/tab'
 Vue.component('lg-header', header);
 Vue.component('lg-footer', footer);
+Vue.component('my-map', map);
 Vue.component('lg-tab', tab);
 
 //注册全局方法
@@ -86,3 +89,5 @@ export var vantModule = {
 }
 Vue.prototype.$vant = vantModule;
 Vue.prototype.$toast = Toast;
+Vue.use(Swipe);
+Vue.use(SwipeItem);

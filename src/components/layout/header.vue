@@ -1,5 +1,5 @@
 <template>
-  <div id="header" class="float">
+  <div id="header" class="float clearfix">
     <div class="left">
       <img :src="logo_ImgUrl" alt="logo" />
     </div>
@@ -8,6 +8,7 @@
       <img v-else :src="heard_right_ImgUrl" alt="logo" />
     </div>
     <div class="center">{{header_title}}</div>
+    <div></div>
     <transition name="fade">
       <div v-show="isShow" class="menu">
         <div
@@ -44,19 +45,26 @@
 export default {
   data() {
     return {
-      header_title:"首页",
+      header_title: "首页",
       logo_ImgUrl: require("../../images/logo.png"),
       heard_right_ImgUrl: require("../../images/list.png"),
       heard_right_ImgUrl_close: require("../../images/close.png"),
       isShow: false,
       menuList: [
-        { name: "首页",go:"/home"},
-        { name: "骨骼测评",go:"/test" },
-        { name: "关于我们",go:"/fuyin" },
-        { name: "联系我们",go:"/contact" }
+        { name: "首页", go: "/home" },
+        { name: "骨骼测评", go: "/test" },
+        { name: "关于我们", go: "/fuyin" },
+        { name: "联系我们", go: "/contact" }
       ],
       act: 0
     };
+  },
+  mounted() {
+    this.menuList.forEach(obj => {
+      if (this.$route.path == obj.go) {
+        this.header_title = obj.name;
+      }
+    });
   },
   // components:{
   //     [NavBar.name]: NavBar,
@@ -104,9 +112,9 @@ export default {
   //     }
   // },
   methods: {
-    menu_item_fuc(index,item) {
+    menu_item_fuc(index, item) {
       this.$router.push(item.go);
-      this.header_title=item.name;
+      this.header_title = item.name;
       this.act = index;
       this.isShow = false;
     },
@@ -160,9 +168,15 @@ export default {
   color: #fdf6e3;
 }
 #header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-bottom: 1px;
+  // position: relative;
+  // top: 0;
   height: 2.5rem;
   background: #819a35;
+  z-index: 10000;
   .menu {
     width: 100%;
     height: 100%;
@@ -197,7 +211,7 @@ export default {
 }
 .float .right {
   float: right;
-  padding: 5px 5px 5px 50px;
+  padding: 10px 5px 10px 50px;
   img {
     height: 100%;
   }

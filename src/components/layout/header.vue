@@ -60,9 +60,10 @@ export default {
     };
   },
   mounted() {
-    this.menuList.forEach(obj => {
+    this.menuList.forEach((obj,index) => {
       if (this.$route.path == obj.go) {
         this.header_title = obj.name;
+        this.act = index;
       }
     });
   },

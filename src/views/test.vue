@@ -30,7 +30,7 @@
     <div class="my-title">
       <h1>骨骼测评的组成</h1>
     </div>
-    <van-swipe :loop="false" :width="120" :show-indicators="false">
+    <van-swipe :loop="false" :width="120" :show-indicators="false" :stop-propagation="false">
       <van-swipe-item @click="menu(index)" v-for="(item,index) in zcList" :key="index">
         <div class="guge-zc">
           <img :src="item.imgUrl" :alt="index" />
@@ -129,7 +129,8 @@ export default {
 .banner {
   width: 100%;
   height: 610px;
-  background: url(../images/animation.gif);
+  background: url(../images/animation.gif) no-repeat center;
+  background-size: 100% 100%;
   position: relative;
 }
 .banner-mask {

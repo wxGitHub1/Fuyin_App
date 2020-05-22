@@ -117,21 +117,24 @@
       font-weight: 100;
     }
     h1::before {
-      background-image: url(../../images/line_l.png);
+      background: url(../../images/line_l.png) no-repeat;
       content: "";
-      width: 72px;
-      height: 12px;
+      width: 73px;
+      height: 11px;
       display: inline-block;
       position: relative;
       left: -1rem;
   }
   h1::after {
-      background-image: url(../../images/line_r.png);
+      background: url(../../images/line_r.png) no-repeat;
       content: "";
-      width: 72px;
-      height: 12px;
+      width: 73px;
+      height: 11px;
       display: inline-block;
       position: relative;
       left: 1rem;
   }
   }
+//   #type .van-swipe-item {
+//     margin: 20px;
+// }

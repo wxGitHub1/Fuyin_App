@@ -8,7 +8,11 @@
       <img v-else :src="heard_right_ImgUrl" alt="logo" />
     </div>
     <div class="center">{{this.$store.state.header_title}}</div>
-    <div></div>
+    <!-- <div></div> -->
+    <!-- 回到顶部 -->
+    <div @click="click_fuc" style="position:fixed;right:10px;bottom:10px">
+      <img src="../../images/home/back_top.png" alt='回到顶部' />
+    </div>
     <transition name="fade">
       <div v-show="isShow" class="menu">
         <div
@@ -59,14 +63,14 @@ export default {
     };
   },
   mounted() {
-    this.menuList.forEach((obj,index) => {
+    this.menuList.forEach((obj, index) => {
       if (this.$route.name == obj.go) {
-        this.$store.commit('changeTitle',obj.name)
+        this.$store.commit("changeTitle", obj.name);
         this.act = index;
       }
     });
-    if(this.$route.name=='type'){
-      this.$store.commit('changeTitle','测评类型')
+    if (this.$route.name == "type") {
+      this.$store.commit("changeTitle", "测评类型");
       this.act = 1;
     }
   },
@@ -116,9 +120,24 @@ export default {
   //     }
   // },
   methods: {
+    click_fuc() {
+      let timer = null;
+      cancelAnimationFrame(timer);
+      timer = requestAnimationFrame(function fn() {
+        let oTop =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        if (oTop > 0) {
+          scrollTo(0, oTop - 50);
+          timer = requestAnimationFrame(fn);
+        } else {
+          cancelAnimationFrame(timer);
+        }
+      });
+    },
+
     menu_item_fuc(index, item) {
-      this.$router.push({name:item.go});
-      this.$store.commit('changeTitle',item.name)
+      this.$router.push({ name: item.go });
+      this.$store.commit("changeTitle", item.name);
       this.act = index;
       this.isShow = false;
     },

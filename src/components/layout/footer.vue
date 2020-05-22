@@ -120,7 +120,7 @@ export default {
   margin-top: 1rem;
 }
 .intr p {
-  font-size: 0.5rem;
+  font-size: 0.9rem;
   color: #9d9d9d;
   margin: 0;
   font-weight: 0;

@@ -126,7 +126,7 @@ export default {
   }
 }
 .container_fouth {
-  font-size: 0.9px;
+  font-size: 0.9rem;
   font-family: CTZhongYuanSJ;
   font-weight: 400;
   color: rgba(102, 102, 102, 1);

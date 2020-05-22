@@ -19,7 +19,7 @@
     <div class="margin-lr-P5">
       <div v-for="(item,index) in tzList" :key="index" class="container">
         <div class="image">
-          <img :src="item.imgUrl" :alt="index" />
+          <img :src="item.imgUrl" :alt="index" width="50px"/>
         </div>
         <div class="text">
           <h3>{{item.title}}</h3>
@@ -44,7 +44,7 @@
       </div>
       <div class="text1">扫描下方二维码，了解发育型防护气垫产品</div>
       <div class="text-C margin-tb-20">
-        <img src="../images/test/img_erwei.png" alt="ma" />
+        <img src="../images/test/img_erwei.png" alt="ma" width="164px"/>
       </div>
       <div class="text2">扫码进入小程序</div>
     </div>
@@ -124,7 +124,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 #test {
-  margin-top: 2.5rem;
+  margin-top: 4rem;
 }
 .banner {
   width: 100%;
@@ -179,16 +179,18 @@ export default {
     text-align: left;
     h3 {
       margin: 0;
-      font-weight: 550;
       letter-spacing: 1px;
-      font-size: 1.1rem;
+      font-size: 1rem;
+      font-weight:bold;
+      color:rgba(91,91,91,1);
+      margin-bottom: 1.5rem;
     }
     p {
-      margin: 0;
-      padding-top: 0.5rem;
-      color: #6b6b6b;
-      font-weight: 550;
-      font-size: 0.8rem;
+      font-size:0.7rem;
+      font-family:Microsoft YaHei;
+      font-weight:400;
+      color:rgba(131,131,131,1);
+      line-height:2.5rem;
     }
   }
 }
@@ -201,23 +203,23 @@ export default {
   }
 }
 .color_show {
-  margin-top: 20px;
-  padding-top: 100px;
+  margin-top: 2rem;
+  padding-top: 10rem;
   width: 100%;
   background: url(../images/img_shui.png) no-repeat top;
   background-size: 100% 150px;
 }
 .text1 {
   text-align: center;
-  font-size: 7px;
+  font-size: 0.7rem;
   font-family: Microsoft YaHei;
   font-weight: 400;
   color: rgba(153, 153, 153, 1);
 }
 .text2 {
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 12px;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
   font-family: Microsoft YaHei;
   font-weight: 400;
   color: rgba(68, 68, 68, 1);

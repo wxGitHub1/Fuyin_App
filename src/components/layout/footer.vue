@@ -2,7 +2,7 @@
   <div id="footer">
     <div class="phone">
       <div class="text">
-        <div class="animated tada">关于骨骼测评</div>
+        <div class="" @click="guanyu()">关于骨骼测评</div>
       </div>
       <div class="number">
         <a href="tel: 029-6888-2888">029-6888-2888</a>
@@ -21,9 +21,9 @@
         href="http://www.beian.miit.gov.cn"
         style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"
       >
-        <img :src="GA_ImgUrl" style="float:left;" />
+        <img :src="GA_ImgUrl" style="float:left;" width="20px" />
         <p
-          style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;font-size:0.2rem"
+          style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;font-size:0.9rem"
         >陕公网安备 61010402000448号</p>
       </a>
     </div>
@@ -47,7 +47,7 @@ export default {
     return {
       GA_ImgUrl: require("@/images/BA.png")
     };
-  }
+  },
   // components:{
   //     [Tabbar.name]: Tabbar,
   //     [TabbarItem.name]: TabbarItem,
@@ -67,6 +67,12 @@ export default {
   //     tabClick(key){
   //     }
   // },
+  methods: {
+    guanyu(){
+        this.$router.push({ name: "test" });
+        this.$store.commit("changeTitle", "骨骼测评");
+    }
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -88,24 +94,23 @@ export default {
   display: inline-block;
   width: 49%;
   text-align: center;
-  margin: 1.3rem 0;
-  height: 2.5rem;
+  margin: 2rem 0;
+  font-size:1.5rem;
 }
 .phone .text div {
   line-height: 2.5rem;
 }
 .phone .number a {
-  line-height: 1.5rem;
+  // line-height: 2rem;
   color: #a3b271;
-}
-.phone .number p {
-  line-height: 1rem;
+  font-size:1.5rem;
 }
 .phone > div:last-child {
   border-left: 1px solid rgba(1, 1, 1, 0.3);
 }
 .phone .number p {
-  font-size: 0.6rem;
+  // line-height: 1rem;
+  font-size: 0.8rem;
   color: #b7b7b7;
 }
 .intr {

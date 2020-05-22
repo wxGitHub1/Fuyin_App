@@ -2,7 +2,7 @@
   <div id="type">
     <div v-if="isIndex==0">
       <div class="titleImg">
-        <img src="../images/type/zubu/title.png" alt="1" />
+        <img src="../images/type/zubu/title.png" alt="1" width="150px" />
       </div>
       <div class="my-title">
         <h1>足部发育测评</h1>
@@ -27,7 +27,7 @@
         <h1>匹配建议</h1>
       </div>
       <div class="titleImg">
-        <img src="../images/type/zubu/pipe.png" alt="1" />
+        <img src="../images/type/zubu/pipe.png" alt="1" width="325px" />
       </div>
       <div class="banner-bottom">
         <div v-for="(item,index) in bannerImgList_1" :key="index" @click="menu(index)" class="box">
@@ -37,7 +37,7 @@
     </div>
     <div v-if="isIndex==1">
       <div class="titleImg">
-        <img src="../images/type/xiazhi/title.png" alt="1" />
+        <img src="../images/type/xiazhi/title.png" alt="1" width="150px" />
       </div>
       <div class="my-title">
         <h1>下肢发育测评</h1>
@@ -62,7 +62,7 @@
         <h1>匹配建议</h1>
       </div>
       <div class="titleImg">
-        <img src="../images/type/xiazhi/pipe.png" alt="1" />
+        <img src="../images/type/xiazhi/pipe.png" alt="1" width="325px" />
       </div>
       <div class="banner-bottom">
         <div v-for="(item,index) in bannerImgList_2" :key="index" @click="menu(index)" class="box">
@@ -72,7 +72,7 @@
     </div>
     <div v-if="isIndex==2">
       <div class="titleImg">
-        <img src="../images/type/qugan/title.png" alt="1" />
+        <img src="../images/type/qugan/title.png" alt="1" width="150px" />
       </div>
       <div class="my-title">
         <h1>躯干发育测评</h1>
@@ -97,7 +97,7 @@
         <h1>匹配建议</h1>
       </div>
       <div class="titleImg">
-        <img src="../images/type/qugan/pipe.png" alt="1" />
+        <img src="../images/type/qugan/pipe.png" alt="1" width="325px" />
       </div>
       <div class="banner-bottom">
         <div v-for="(item,index) in bannerImgList_3" :key="index" @click="menu(index)" class="box">
@@ -107,7 +107,7 @@
     </div>
     <div v-if="isIndex==3">
       <div class="titleImg">
-        <img src="../images/type/jichu/title.png" alt="1" />
+        <img src="../images/type/jichu/title.png" alt="1" width="150px" />
       </div>
       <div class="my-title">
         <h1>基础发育测评</h1>
@@ -130,7 +130,7 @@
         <h1>匹配建议</h1>
       </div>
       <div class="titleImg">
-        <img src="../images/type/jichu/pipe.png" alt="1" />
+        <img src="../images/type/jichu/pipe.png" alt="1" width="325px" />
       </div>
       <div class="banner-bottom">
         <div v-for="(item,index) in bannerImgList_4" :key="index" @click="menu(index)" class="box">
@@ -175,7 +175,7 @@ export default {
           text_1: "测量身高",
           text_2: "测量体重",
           text_3: "作为其他部位发育的参考依据"
-        },
+        }
       ],
       zcList_2: [
         {
@@ -219,7 +219,7 @@ export default {
           text_1: "测量身高",
           text_2: "测量体重",
           text_3: "作为其他部位发育的参考依据"
-        },
+        }
       ],
       zcList_1: [
         {
@@ -257,7 +257,7 @@ export default {
           text_1: "测量身高",
           text_2: "测量体重",
           text_3: "作为其他部位发育的参考依据"
-        },
+        }
       ],
       zcList: [
         {
@@ -289,7 +289,7 @@ export default {
           text_1: "测量身高",
           text_2: "测量体重",
           text_3: "作为其他部位发育的参考依据"
-        },
+        }
       ],
       bannerImgList_1: [
         { name: "足部测评", imgUrl: require("../images/type/zubu/icon_1.png") },
@@ -335,7 +335,7 @@ export default {
       ]
     };
   },
-  created(){},
+  created() {},
   mounted() {
     this.isIndex = this.$route.query.id;
   },
@@ -348,7 +348,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 #type {
-  margin-top: 2.5rem;
+  margin-top: 4rem;
 }
 .titleImg {
   text-align: center;
@@ -359,8 +359,9 @@ export default {
   margin: 0 auto;
   font-size: 0.9rem;
   letter-spacing: 1px;
-  line-height: 1.6rem;
-  padding: 20px 0;
+  padding: 1rem 0;
+  color: rgba(68, 68, 68, 1);
+  line-height: 2.4rem;
 }
 .banner-bottom {
   width: 100%;
@@ -380,41 +381,37 @@ export default {
 }
 
 .cpx {
-  // width: 270px;
-  height:200px;
-  // text-align: center;
+  height: 200px;
   box-sizing: border-box;
   margin: 10px;
-  padding: 1rem;
+  padding: 2rem;
   background-color: #fff;
   border-radius: 9px;
-  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
   h1 {
     font-family: MicrosoftYaHei;
-    font-size: 1.3rem;
-    font-weight: 400;
+    font-size: 1rem;
     font-stretch: normal;
     letter-spacing: 3px;
     color: #3f8e0c;
-    margin-bottom: 10px;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    color: rgba(130, 154, 54, 1);
   }
   p {
-    font-family: MicrosoftYaHei;
-    font-size: 14px;
-    font-weight: 400;
-    font-stretch: normal;
+    font-size: 0.9rem;
     letter-spacing: 1px;
     color: #999;
-    line-height: 20px;
+    line-height: 1.5rem;
     padding-left: 20px;
     position: relative;
-    margin-bottom: 5px;
+    margin-bottom: 1.5rem;
   }
   p::after {
     content: "";
-    width: 10px;
-    height: 10px;
-    background: olivedrab;
+    width: 0.6rem;
+    height: 0.6rem;
+    background: #829a36;
     position: absolute;
     left: 0;
     top: 50%;
@@ -425,5 +422,5 @@ export default {
 // .swiper-container {
 //     width: 600px;
 //     height: 300px;
-// }  
+// }
 </style>

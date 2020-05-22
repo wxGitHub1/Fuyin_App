@@ -13,7 +13,10 @@
         <p>专利技术</p>
       </div>
       <div class="container">
-        <h3>40万</h3>
+        <h3>
+          40
+          <span>万</span>
+        </h3>
         <p>服务人数</p>
       </div>
       <div class="container">
@@ -54,7 +57,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 #fuyin {
-  margin-top: 2.5rem;
+  margin-top: 4rem;
 }
 .number {
   width: 90%;
@@ -67,14 +70,16 @@ export default {
     text-align: center;
     margin-left: 0.2rem;
     h3 {
-      margin: 0;
-      font-size: 1.5rem;
-      font-weight: 100;
+      font-size: 1.7rem;
+      color: #444444;
+      font-weight: 600;
+      span{
+        font-size: 1.2rem;
+      }
     }
     p {
-      margin: 0;
-      color: #6b6b6b;
-      font-size: 0.8rem;
+      color: #898989;
+      font-size: 0.7rem;
     }
   }
 }
@@ -83,11 +88,11 @@ export default {
   margin: 0 auto;
 }
 .text {
-  font-size: 9px;
+  font-size: 0.9rem;
   font-family: Microsoft YaHei;
   font-weight: 400;
   color: rgba(136, 136, 136, 1);
-  line-height: 24px;
+  line-height: 2.4rem;
 }
 .address {
   width: 90%;
@@ -95,7 +100,7 @@ export default {
   color: #6b6b6b;
   font-size: 0.8rem;
   letter-spacing: 1px;
-  padding: 1.2rem 0 1.5rem;
+  padding: 3rem 0 1.5rem;
   p {
     margin-bottom: 10px;
   }

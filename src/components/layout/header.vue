@@ -11,7 +11,7 @@
     <!-- <div></div> -->
     <!-- 回到顶部 -->
     <div @click="click_fuc" style="position:fixed;right:10px;bottom:10px">
-      <img src="../../images/home/back_top.png" alt='回到顶部' />
+      <img src="../../images/home/back_top.png" alt="回到顶部" width="35px" />
     </div>
     <transition name="fade">
       <div v-show="isShow" class="menu">
@@ -167,27 +167,29 @@ export default {
   opacity: 0;
 }
 .left {
-  width: 100px;
-  height: 2.5rem;
+  width: 10rem;
+  height: 4rem;
   // background-color: #823384;
   text-align: center;
-  font-size: 20px;
+  // font-size: 20px;
   color: #fdf6e3;
 }
 .center {
-  height: 2.5rem;
-  line-height: 2.5rem;
-  font-size: 1rem;
-  color: #fff;
+  height: 4rem;
+  line-height: 4rem;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 1);
+  // line-height:18px;
+  // color: #fff;
   text-align: center;
   // background-color: #d29922;
 }
 .right {
-  width: 100px;
-  height: 2.5rem;
+  width: 10rem;
+  height: 4rem;
   // background-color: #0c8ac5;
   text-align: center;
-  font-size: 20px;
+  // font-size: 20px;
   color: #fdf6e3;
 }
 #header {
@@ -197,7 +199,7 @@ export default {
   padding-bottom: 1px;
   // position: relative;
   // top: 0;
-  height: 2.5rem;
+  height: 4rem;
   background: #819a35;
   z-index: 10000;
   .menu {
@@ -206,16 +208,18 @@ export default {
     background: rgba(97, 112, 48, 0.9);
     position: fixed;
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
     font-weight: 500;
-    top: 2.5rem;
+    top: 4rem;
     div {
       width: 90%;
-      height: 3rem;
-      line-height: 3rem;
+      // height: 3rem;
+      // line-height: 3rem;
+      padding: 1.9rem 0;
       margin: 0 auto;
-      border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
+      border-bottom: 1px solid rgba(170,170,170,0.6);
+      color: #fff;
     }
     .active {
       color: #9eea6a;
@@ -227,7 +231,7 @@ export default {
 }
 .float .left {
   float: left;
-  padding: 5px;
+  padding: 0.5rem;
   img {
     height: 100%;
   }

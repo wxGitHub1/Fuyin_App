@@ -1,16 +1,16 @@
 <template>
   <div id="home">
-    <div class="text-C margin-tb-20">
+    <div class="text-C img1">
       <img :src="img1" alt="img1" width="242px" />
     </div>
     <div class="text-C margin-tb-40">
       <img :src="img2" alt="img2" width="334px" />
     </div>
     <div class="margin-lr-P5">
-      <h1 class="text-C margin-tb-40 why">为什么骨骼测评？</h1>
+      <h1 class="text-C margin-tb-40 why">骨骼测评的意义？</h1>
       <div v-for="(item,index) in whyList" :key="index" class="container">
         <div class="image">
-          <img :src="item.imgUrl" :alt="index" />
+          <img :src="item.imgUrl" :alt="index" width="50px"/>
         </div>
         <div class="text">
           <h3>{{item.title}}</h3>
@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="width-p90 margin-auto border-1">
-      <div class="container_fouth padding-tb-40">{{myText}}</div>
+      <div class="container_fouth">{{myText}}</div>
     </div>
   </div>
 </template>
@@ -87,14 +87,15 @@ export default {
 </script>
 <style lang="scss" scoped>
 #home {
-  padding: 1;
-  margin-top: 2.5rem;
+  margin-top: 4rem;
   padding-top: 1px;
 }
+.img1{
+  margin: 5rem 0;
+}
 .why {
-  color: #84973a;
-  letter-spacing: 8px;
-  font-size: 2em;
+  font-size: 2.9rem;
+  color: rgba(130, 154, 54, 1);
 }
 .container {
   margin: 2rem 0;
@@ -111,28 +112,28 @@ export default {
     margin-left: 1rem;
     text-align: left;
     h3 {
-      margin: 0;
-      font-weight: 550;
-      letter-spacing: 1px;
-      font-size: 1.1rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: rgba(35, 35, 35, 1);
     }
     p {
-      margin: 0;
-      padding-top: 0.5rem;
-      color: #6b6b6b;
-      font-weight: 550;
-      font-size: 0.8rem;
+      padding-top: 1.2rem;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: rgba(102, 102, 102, 1);
+      line-height: 1.8rem;
     }
   }
 }
 .container_fouth {
-  font-size: 9px;
+  font-size: 0.9px;
   font-family: CTZhongYuanSJ;
   font-weight: 400;
   color: rgba(102, 102, 102, 1);
-  line-height: 24px;
+  line-height: 2.4rem;
+  padding: 3.4rem 0;
 }
-.border-1{
+.border-1 {
   border-top: 1px solid rgba(1, 1, 1, 0.3);
 }
 // #home {

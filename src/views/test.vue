@@ -154,7 +154,7 @@ export default {
       width: 25%;
       text-align: center;
       color: #ffffff;
-      font-size: 0.8rem;
+      font-size: 1.5rem;
       letter-spacing: 1px;
     }
   }
@@ -180,13 +180,13 @@ export default {
     h3 {
       margin: 0;
       letter-spacing: 1px;
-      font-size: 1rem;
+      font-size: 1.7rem;
       font-weight:bold;
       color:rgba(91,91,91,1);
       margin-bottom: 1.5rem;
     }
     p {
-      font-size:0.7rem;
+      font-size:1.3rem;
       font-family:Microsoft YaHei;
       font-weight:400;
       color:rgba(131,131,131,1);
@@ -197,7 +197,7 @@ export default {
 .guge-zc {
   width: 120px;
   text-align: center;
-  font-size: 15px;
+  font-size: 1.5rem;
   img {
     width: 106px;
   }
@@ -211,7 +211,7 @@ export default {
 }
 .text1 {
   text-align: center;
-  font-size: 0.7rem;
+  font-size:1.4rem;
   font-family: Microsoft YaHei;
   font-weight: 400;
   color: rgba(153, 153, 153, 1);
@@ -219,7 +219,7 @@ export default {
 .text2 {
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-family: Microsoft YaHei;
   font-weight: 400;
   color: rgba(68, 68, 68, 1);

@@ -70,7 +70,7 @@ export default {
     text-align: center;
     margin-left: 0.2rem;
     h3 {
-      font-size: 1.7rem;
+      font-size: 2rem;
       color: #444444;
       font-weight: 600;
       span{
@@ -79,7 +79,7 @@ export default {
     }
     p {
       color: #898989;
-      font-size: 0.7rem;
+      font-size: 1.2rem;
     }
   }
 }
@@ -88,7 +88,7 @@ export default {
   margin: 0 auto;
 }
 .text {
-  font-size: 0.9rem;
+  font-size:1.4rem;
   font-family: Microsoft YaHei;
   font-weight: 400;
   color: rgba(136, 136, 136, 1);
@@ -98,7 +98,7 @@ export default {
   width: 90%;
   margin: 0 auto;
   color: #6b6b6b;
-  font-size: 0.8rem;
+  font-size: 1.3rem;
   letter-spacing: 1px;
   padding: 3rem 0 1.5rem;
   p {

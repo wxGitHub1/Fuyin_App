@@ -118,7 +118,7 @@ export default {
     }
     p {
       padding-top: 1.2rem;
-      font-size: 0.9rem;
+      font-size: 1.3rem;
       font-weight: 400;
       color: rgba(102, 102, 102, 1);
       line-height: 1.8rem;
@@ -126,7 +126,7 @@ export default {
   }
 }
 .container_fouth {
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   font-family: CTZhongYuanSJ;
   font-weight: 400;
   color: rgba(102, 102, 102, 1);

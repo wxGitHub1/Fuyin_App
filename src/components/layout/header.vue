@@ -177,7 +177,7 @@ export default {
 .center {
   height: 4rem;
   line-height: 4rem;
-  font-size: 1.2rem;
+  font-size: 2rem;
   color: rgba(255, 255, 255, 1);
   // line-height:18px;
   // color: #fff;
@@ -208,7 +208,7 @@ export default {
     background: rgba(97, 112, 48, 0.9);
     position: fixed;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-align: center;
     font-weight: 500;
     top: 4rem;
@@ -238,7 +238,7 @@ export default {
 }
 .float .right {
   float: right;
-  padding: 10px 5px 10px 50px;
+  padding: 1rem 0.5rem 1rem 5rem;
   img {
     height: 100%;
   }

@@ -357,7 +357,7 @@ export default {
 .next_introduce {
   width: 77%;
   margin: 0 auto;
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   letter-spacing: 1px;
   padding: 1rem 0;
   color: rgba(68, 68, 68, 1);
@@ -375,7 +375,7 @@ export default {
     width: 25%;
     text-align: center;
     color: #ffffff;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     letter-spacing: 1px;
   }
 }
@@ -390,7 +390,7 @@ export default {
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
   h1 {
     font-family: MicrosoftYaHei;
-    font-size: 1rem;
+    font-size: 1.7rem;
     font-stretch: normal;
     letter-spacing: 3px;
     color: #3f8e0c;
@@ -399,7 +399,7 @@ export default {
     color: rgba(130, 154, 54, 1);
   }
   p {
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     letter-spacing: 1px;
     color: #999;
     line-height: 1.5rem;

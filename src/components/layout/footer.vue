@@ -23,7 +23,7 @@
       >
         <img :src="GA_ImgUrl" style="float:left;" width="20px" />
         <p
-          style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;font-size:0.9rem"
+          style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;font-size:1.2rem"
         >陕公网安备 61010402000448号</p>
       </a>
     </div>
@@ -110,7 +110,7 @@ export default {
 }
 .phone .number p {
   // line-height: 1rem;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   color: #b7b7b7;
 }
 .intr {
@@ -120,7 +120,7 @@ export default {
   margin-top: 1rem;
 }
 .intr p {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: #9d9d9d;
   margin: 0;
   font-weight: 0;

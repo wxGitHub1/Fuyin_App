@@ -52,14 +52,14 @@ h2 {
   color: rgba(136, 136, 136, 1);
   line-height: 20px;
   letter-spacing: 1px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   padding-bottom: 3rem;
 }
 .address {
   width: 90%;
   margin: 0 auto;
   color: #6b6b6b;
-  font-size: 0.8rem;
+  font-size: 1.3rem;
   letter-spacing: 1px;
   padding: 3rem 0 1.5rem;
   p {

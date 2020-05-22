@@ -4,7 +4,7 @@
       <img :src="img1" alt="img1" width="242px" />
     </div>
     <div class="text-C margin-tb-40">
-      <img :src="img2" alt="img1" width="334px" />
+      <img :src="img2" alt="img2" width="334px" />
     </div>
     <div class="margin-lr-P5">
       <h1 class="text-C margin-tb-40 why">为什么骨骼测评？</h1>
@@ -27,29 +27,29 @@
 export default {
   data() {
     return {
-      img1: require("../images/home/img_gu.png"),
-      img2: require("../images/home/img_boy.png"),
-      img3: require("../images/home/icon_01.png"),
+      img1: require("@/images/home/img_gu.png"),
+      img2: require("@/images/home/img_boy.png"),
+      img3: require("@/images/home/icon_01.png"),
       whyList: [
         {
-          imgUrl: require("../images/home/icon_01.png"),
+          imgUrl: require("@/images/home/icon_01.png"),
           title: "了解孩子发育现状",
           text: "进行全面的骨骼测评，可清晰了解到孩子的发育现状。"
         },
         {
-          imgUrl: require("../images/home/icon_02.png"),
+          imgUrl: require("@/images/home/icon_02.png"),
           title: "持续跟踪孩子发育状况",
           text:
             "骨骼发育是一个持续的过程，儿童和青少年时期骨骼发育速度最快，定期更新发育数据是防患于未然最好的方法。"
         },
         {
-          imgUrl: require("../images/home/icon_03.png"),
+          imgUrl: require("@/images/home/icon_03.png"),
           title: "及早发现骨骼发育问题",
           text:
             "骨骼发育影响孩子的一生，全面的骨骼测评可以及早发现潜在的问题，并及时进行干预。"
         },
         {
-          imgUrl: require("../images/home/icon_04.png"),
+          imgUrl: require("@/images/home/icon_04.png"),
           title: "匹配适合的运动或产品",
           text:
             "每个孩子的骨骼测评数据都不相同，根据这些数据我们推荐适合每一个孩子的运动建议或矫形产品。"

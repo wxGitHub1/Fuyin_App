@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: '/',
+  publicPath: './',
   outputDir: 'dist',
   assetsDir: 'static',
   lintOnSave: false,
@@ -17,5 +17,6 @@ module.exports = {
         }
       }
     },
-  }
+  },
+  // baseUrl: './'
 };

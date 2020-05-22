@@ -45,7 +45,7 @@
 export default {
   data() {
     return {
-      GA_ImgUrl: require("../../images/BA.png")
+      GA_ImgUrl: require("@/images/BA.png")
     };
   }
   // components:{

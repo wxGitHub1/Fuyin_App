@@ -16,7 +16,7 @@
     <transition name="fade">
       <div v-show="isShow" class="menu">
         <div
-          :class="{active:act==index}"
+          :class="{active:reversedMessage==index}"
           @click="menu_item_fuc(index,item)"
           v-for="(item,index) in menuList"
           :key="index"
@@ -59,19 +59,23 @@ export default {
         { name: "关于我们", go: "fuyin" },
         { name: "联系我们", go: "contact" }
       ],
-      act: 0
     };
   },
   mounted() {
     this.menuList.forEach((obj, index) => {
       if (this.$route.name == obj.go) {
         this.$store.commit("changeTitle", obj.name);
-        this.act = index;
+         this.$store.commit("changeTitleActive",index);
       }
     });
     if (this.$route.name == "type") {
       this.$store.commit("changeTitle", "测评类型");
-      this.act = 1;
+       this.$store.commit("changeTitleActive", 1);
+    }
+  },
+  computed:{
+    reversedMessage(){
+       return this.$store.state.act
     }
   },
   // components:{
@@ -138,7 +142,7 @@ export default {
     menu_item_fuc(index, item) {
       this.$router.push({ name: item.go });
       this.$store.commit("changeTitle", item.name);
-      this.act = index;
+      this.$store.commit("changeTitleActive",index);
       this.isShow = false;
     },
     menu() {

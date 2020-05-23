@@ -71,6 +71,7 @@ export default {
     guanyu(){
         this.$router.push({ name: "test" });
         this.$store.commit("changeTitle", "骨骼测评");
+        this.$store.commit("changeTitleActive", 1);
     }
   },
 };
